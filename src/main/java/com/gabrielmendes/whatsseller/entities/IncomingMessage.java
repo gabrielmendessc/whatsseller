@@ -27,4 +27,24 @@ public class IncomingMessage implements Serializable {
                 ", to='" + to + '\'' +
                 '}';
     }
+
+    public String getSmsMessageSid() {
+        return smsMessageSid;
+    }
+
+    public String getSmsStatus() {
+        return smsStatus;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public String getFrom() {
+        return from;
+    }
+
+    public String getTo() {
+        return to;
+    }
 }
