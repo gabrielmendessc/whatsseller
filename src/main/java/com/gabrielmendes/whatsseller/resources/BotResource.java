@@ -23,7 +23,6 @@ public class BotResource {
     @PostMapping()
     public ResponseEntity<String> returnOk(@RequestBody MultiValueMap<String, Object> incomingMessage){
         System.out.println(incomingMessage.toString());
-
         Map<String, Object> map = MapUtil.getMapIncomingMessage(incomingMessage);
         BotService.run(new ObjectMapper().convertValue(map, IncomingMessage.class));
 
