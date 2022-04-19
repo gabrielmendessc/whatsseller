@@ -15,7 +15,8 @@ public class MapUtil {
             "SmsStatus",
             "Body",
             "From",
-            "To"
+            "To",
+            "MediaUrl0"
     });
 
     public static Map<String, Object> getMapIncomingMessage(MultiValueMap multiValueMap){

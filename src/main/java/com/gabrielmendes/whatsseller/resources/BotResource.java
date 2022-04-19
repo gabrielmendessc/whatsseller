@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gabrielmendes.whatsseller.entities.IncomingMessage;
 import com.gabrielmendes.whatsseller.services.BotService;
 import com.gabrielmendes.whatsseller.utils.MapUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +18,7 @@ import java.util.Map;
 @RequestMapping("/send-message")
 public class BotResource {
 
-    //@Autowired
+    @Autowired
     private BotService botService;
 
     @PostMapping()
@@ -25,7 +26,7 @@ public class BotResource {
         System.out.println(incomingMessage.toString());
 
         Map<String, Object> map = MapUtil.getMapIncomingMessage(incomingMessage);
-        BotService.run(new ObjectMapper().convertValue(map, IncomingMessage.class));
+        botService.run(new ObjectMapper().convertValue(map, IncomingMessage.class));
 
         return ResponseEntity.ok("Request received");
     }

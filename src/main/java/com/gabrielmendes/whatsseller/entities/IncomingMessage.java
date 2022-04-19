@@ -16,6 +16,8 @@ public class IncomingMessage implements Serializable {
     private String from;
     @JsonProperty("To")
     private String to;
+    @JsonProperty("MediaUrl0")
+    private String mediaUrl;
 
     @Override
     public String toString() {
@@ -47,4 +49,6 @@ public class IncomingMessage implements Serializable {
     public String getTo() {
         return to;
     }
+
+    public String getMediaUrl() { return mediaUrl; }
 }
