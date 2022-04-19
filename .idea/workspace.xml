@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af1c1d23-99e1-474c-87f7-618dadb287da" name="Default Changelist" comment="Initial commit - RestController for receveing message">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/exceptions/InvalidURLException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BarcodeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="af1c1d23-99e1-474c-87f7-618dadb287da" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/IncomingMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/IncomingMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/resources/BotResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/resources/BotResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BotService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/utils/MapUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/utils/MapUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Whats Seller.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BarcodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BarcodeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +128,7 @@
       <workItem from="1650028886595" duration="32443000" />
       <workItem from="1650324768479" duration="281000" />
       <workItem from="1650325143021" duration="52000" />
-      <workItem from="1650325223841" duration="3968000" />
+      <workItem from="1650325223841" duration="6540000" />
     </task>
     <task id="LOCAL-00001" summary="heroku dev">
       <created>1650031311289</created>
@@ -359,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650064285102</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="BarcodeService implementation">
+      <created>1650329638631</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1650329638631</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +374,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="heroku dev" />
     <MESSAGE value="Initial commit - RestController for receveing message" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit - RestController for receveing message" />
+    <MESSAGE value="BarcodeService implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="BarcodeService implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -393,6 +389,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/resources/BotResource.java</url>
           <line>25</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BarcodeService.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

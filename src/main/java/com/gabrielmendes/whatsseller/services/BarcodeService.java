@@ -17,18 +17,38 @@ import java.net.URL;
 @Service
 public class BarcodeService {
 
+    private MultiFormatReader reader = new MultiFormatReader();
     public String readFromUrl(String urlPath){
         try {
             URL url = new URL(urlPath);
+            ImageIO.setUseCache(false);
             BufferedImage bfImage = ImageIO.read(url);
             BinaryBitmap bitmapImage = new BinaryBitmap(new HybridBinarizer(new BufferedImageLuminanceSource(bfImage)));
 
-            MultiFormatReader reader = new MultiFormatReader();
-            Result result = reader.decode(bitmapImage);
+            //Tries to find the barcode on the horizontal
+            String barcodeNumber = "";
+            int rotateTimes = 0;
+            while (barcodeNumber.equals("") && rotateTimes < 2){
+                barcodeNumber = decodeImage(bitmapImage);
+                if(barcodeNumber.equals("")){
+                    bitmapImage = bitmapImage.rotateCounterClockwise();
+                    if(rotateTimes == 1){
+                        bitmapImage = bitmapImage.rotateCounterClockwise();
+                    }
+                }
+                rotateTimes++;
+            }
 
-            return result.getText();
+            return barcodeNumber;
         } catch (IOException e){
             throw new InvalidURLException("Invalid image path: "+urlPath);
+        }
+    }
+
+    public String decodeImage(BinaryBitmap bitmapImage){
+        try {
+            Result result = reader.decode(bitmapImage);
+            return result.getText();
         } catch (NotFoundException e){
             return "";
         }
