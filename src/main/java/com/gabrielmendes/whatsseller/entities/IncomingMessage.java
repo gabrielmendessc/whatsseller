@@ -1,9 +1,13 @@
 package com.gabrielmendes.whatsseller.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.io.Serializable;
 
+@Getter
+@ToString
 public class IncomingMessage implements Serializable {
 
     @JsonProperty("SmsMessageSid")
@@ -19,36 +23,4 @@ public class IncomingMessage implements Serializable {
     @JsonProperty("MediaUrl0")
     private String mediaUrl;
 
-    @Override
-    public String toString() {
-        return "IncomingMessage{" +
-                "smsMessageSid='" + smsMessageSid + '\'' +
-                ", smsStatus='" + smsStatus + '\'' +
-                ", body='" + body + '\'' +
-                ", from='" + from + '\'' +
-                ", to='" + to + '\'' +
-                '}';
-    }
-
-    public String getSmsMessageSid() {
-        return smsMessageSid;
-    }
-
-    public String getSmsStatus() {
-        return smsStatus;
-    }
-
-    public String getBody() {
-        return body;
-    }
-
-    public String getFrom() {
-        return from;
-    }
-
-    public String getTo() {
-        return to;
-    }
-
-    public String getMediaUrl() { return mediaUrl; }
 }
