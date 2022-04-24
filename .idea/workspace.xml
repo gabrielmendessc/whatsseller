@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af1c1d23-99e1-474c-87f7-618dadb287da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/UserChat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/repositories/UserChatRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/resources/UserChatService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/utils/UserChatUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/WhatsSellerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/WhatsSellerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BotService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/UserChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/UserChat.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +132,7 @@
       <workItem from="1650325143021" duration="52000" />
       <workItem from="1650325223841" duration="8864000" />
       <workItem from="1650406569872" duration="3829000" />
-      <workItem from="1650825659460" duration="3209000" />
+      <workItem from="1650825659460" duration="3551000" />
     </task>
     <task id="LOCAL-00001" summary="heroku dev">
       <created>1650031311289</created>
@@ -373,7 +365,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650332187904</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="UserChat">
+      <created>1650828939983</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1650828939983</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Initiating implementation">
+      <created>1650828995113</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1650828995113</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +401,9 @@
     <MESSAGE value="Initial commit - RestController for receveing message" />
     <MESSAGE value="BarcodeService implementation" />
     <MESSAGE value="BarcodeService optimization" />
-    <option name="LAST_COMMIT_MESSAGE" value="BarcodeService optimization" />
+    <MESSAGE value="UserChat" />
+    <MESSAGE value="Initiating implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initiating implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
