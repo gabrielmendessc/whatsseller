@@ -2,7 +2,7 @@ package com.gabrielmendes.whatsseller.enums;
 
 public enum ChatKeywords {
 
-    ABORT("CANCELAR");
+    ABORT("CANCEL");
 
     private String code;
 

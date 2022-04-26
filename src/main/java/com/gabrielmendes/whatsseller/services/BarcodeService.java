@@ -45,7 +45,7 @@ public class BarcodeService {
         }
     }
 
-    public String decodeImage(BinaryBitmap bitmapImage){
+    private String decodeImage(BinaryBitmap bitmapImage){
         try {
             Result result = reader.decode(bitmapImage);
             return result.getText();

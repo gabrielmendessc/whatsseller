@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af1c1d23-99e1-474c-87f7-618dadb287da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/UserChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/UserChat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/ChoiceAbstract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/MenuChoice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/MessagingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/WhatsSellerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/WhatsSellerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/enums/ChatKeywords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/enums/ChatKeywords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/enums/ChatStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/enums/ChatStage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/resources/UserChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/resources/UserChatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BarcodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BarcodeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/utils/UserChatUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/utils/UserChatUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +146,8 @@
       <workItem from="1650325143021" duration="52000" />
       <workItem from="1650325223841" duration="8864000" />
       <workItem from="1650406569872" duration="3829000" />
-      <workItem from="1650825659460" duration="3551000" />
+      <workItem from="1650825659460" duration="7700000" />
+      <workItem from="1651009431750" duration="6012000" />
     </task>
     <task id="LOCAL-00001" summary="heroku dev">
       <created>1650031311289</created>
@@ -379,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650828995113</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Lombok implementation on UserChat">
+      <created>1650829252739</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1650829252739</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,25 +425,36 @@
     <MESSAGE value="BarcodeService optimization" />
     <MESSAGE value="UserChat" />
     <MESSAGE value="Initiating implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initiating implementation" />
+    <MESSAGE value="Lombok implementation on UserChat" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lombok implementation on UserChat" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/enums/ChatChoice.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/resources/BotResource.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BarcodeService.java</url>
           <line>22</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/enums/ChatStage.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/MenuChoice.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BotService.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BotService.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="com.twilio.exception.ApiException" package="com.twilio.exception" />

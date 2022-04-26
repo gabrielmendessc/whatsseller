@@ -15,13 +15,16 @@ public class UserChatService {
 
     public UserChat findByPhoneNumber(String phoneNumber){
         Optional<UserChat> userChat = userChatRepository.findById(phoneNumber);
-        return userChat.orElseThrow();
+        return userChat.orElse(null);
     }
 
     public UserChat insertUserChat(UserChat userChat){
         return userChatRepository.save(userChat);
     }
 
+    public void deleteUserChat(String phoneNumber){
+        userChatRepository.deleteById(phoneNumber);
+    }
     public UserChat updateUserChat(String phoneNumber, UserChat userChat){
         try{
             UserChat userChatEntity = userChatRepository.getById(phoneNumber);

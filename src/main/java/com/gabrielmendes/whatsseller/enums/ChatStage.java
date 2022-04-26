@@ -2,6 +2,8 @@ package com.gabrielmendes.whatsseller.enums;
 
 public enum ChatStage {
 
+    NO_CHOICE(ChatChoice.MENU, 0),
+
     WATING_IMAGE(ChatChoice.SCANNER, 1),
 
     WATING_CPF(ChatChoice.SHOPPING, 1),
