@@ -1,4 +1,4 @@
-package com.gabrielmendes.whatsseller.resources;
+package com.gabrielmendes.whatsseller.services;
 
 import com.gabrielmendes.whatsseller.entities.UserChat;
 import com.gabrielmendes.whatsseller.repositories.UserChatRepository;
@@ -9,7 +9,6 @@ import java.util.Optional;
 
 @Service
 public class UserChatService {
-
     @Autowired
     private UserChatRepository userChatRepository;
 

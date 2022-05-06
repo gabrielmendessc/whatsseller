@@ -4,14 +4,14 @@ import com.gabrielmendes.whatsseller.WhatsSellerApplication;
 import com.gabrielmendes.whatsseller.entities.IncomingMessage;
 import com.gabrielmendes.whatsseller.entities.UserChat;
 import com.gabrielmendes.whatsseller.entities.choices.ChoiceAbstract;
-import com.gabrielmendes.whatsseller.entities.choices.MenuChoice;
+import com.gabrielmendes.whatsseller.entities.choices.services.ChoiceService;
 import com.gabrielmendes.whatsseller.enums.ChatKeywords;
-import com.gabrielmendes.whatsseller.resources.UserChatService;
 import com.gabrielmendes.whatsseller.utils.UserChatUtil;
 import com.twilio.Twilio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
 import java.util.Arrays;
 
 @Service
@@ -21,6 +21,9 @@ public class BotService {
     private UserChatService userChatService;
     @Autowired
     private MessagingService messagingService;
+    @Autowired
+    private ChoiceService choiceService;
+
 
     public void run(IncomingMessage incomingMessage){
         Twilio.init(WhatsSellerApplication.ACCOUNT_SID, WhatsSellerApplication.AUTH_TOKEN);
@@ -35,8 +38,8 @@ public class BotService {
             } else {
                 switch (userChat.getChatChoice()) {
                     case MENU:
-                        choice = new MenuChoice(userChat.getChatStage(), userChat);
-                        userChat = choice.processMessage(incomingMessage);
+                        choice = choiceService.instantiateMenuChoice();
+                        userChat = choice.processMessage(incomingMessage, userChat);
                         break;
                     case SCANNER:
 
@@ -48,6 +51,7 @@ public class BotService {
 
                 }
 
+                userChat.setMessageInstant(Instant.now());
                 userChatService.updateUserChat(userChat.getPhoneNumber(), userChat);
                 messagingService.sendMessages(choice.getSendingMessages(), incomingMessage.getFrom(), incomingMessage.getTo());
             }
@@ -56,9 +60,12 @@ public class BotService {
                 userChatService.deleteUserChat(userChat.getPhoneNumber());
             }
 
-            userChat = UserChatUtil.startUserChat(incomingMessage.getFrom());
-            userChatService.insertUserChat(userChat);
-            messagingService.sendMessages(Arrays.asList("1 - Scanner\n2 - Shopping"), incomingMessage.getFrom(), incomingMessage.getTo());
+            choice = choiceService.instantiateNoChoice();
+            userChat = choice.processMessage(incomingMessage, userChat);
+            if(userChat != null) {
+                userChatService.insertUserChat(userChat);
+            }
+            messagingService.sendMessages(choice.getSendingMessages(), incomingMessage.getFrom(), incomingMessage.getTo());
         }
     }
 }

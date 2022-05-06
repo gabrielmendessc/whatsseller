@@ -23,12 +23,10 @@ public class BotResource {
 
     @PostMapping()
     public ResponseEntity<String> returnOk(@RequestBody MultiValueMap<String, Object> incomingMessage){
-        System.out.println(incomingMessage.toString());
-
         Map<String, Object> map = MapUtil.getMapIncomingMessage(incomingMessage);
         botService.run(new ObjectMapper().convertValue(map, IncomingMessage.class));
 
-        return ResponseEntity.ok("Request received");
+        return ResponseEntity.ok().build();
     }
 
 }
