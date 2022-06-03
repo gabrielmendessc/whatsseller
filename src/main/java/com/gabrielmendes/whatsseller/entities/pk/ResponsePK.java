@@ -13,6 +13,7 @@ public class ResponsePK implements Serializable {
 
     private Integer chatChoice;
     private Integer chatStage;
+    private Integer responseVariant;
     private Integer responseNumber;
 
     public ChatChoice getChatChoice(){
@@ -29,6 +30,14 @@ public class ResponsePK implements Serializable {
 
     public void setChatStage(ChatStage chatStage){
         this.chatStage = chatStage.getCode();
+    }
+
+    public Integer getResponseVariant() {
+        return responseVariant;
+    }
+
+    public void setResponseVariant(Integer responseVariant) {
+        this.responseVariant = responseVariant;
     }
 
     public Integer getResponseNumber(){

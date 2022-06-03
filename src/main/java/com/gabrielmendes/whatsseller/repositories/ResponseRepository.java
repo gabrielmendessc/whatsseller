@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface ResponseRepository extends JpaRepository<Response, ResponsePK> {
-    @Query("SELECT r FROM Response r WHERE r.id.chatChoice = ?1 AND r.id.chatStage = ?2")
-    public List<Response> findByChoiceStage(Integer chatChoice, Integer chatStage);
+    @Query("SELECT r FROM Response r WHERE r.id.chatChoice = ?1 AND r.id.chatStage = ?2 AND r.id.responseVariant = ?3")
+    public List<Response> findByChoiceStage(Integer chatChoice, Integer chatStage, Integer responseVariant);
 
 }

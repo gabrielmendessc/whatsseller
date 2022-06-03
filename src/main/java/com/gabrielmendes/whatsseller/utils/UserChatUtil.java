@@ -14,6 +14,11 @@ public class UserChatUtil {
         return userChat;
     }
 
+    public static UserChat startUserChatScanner(String phoneNumber){
+        UserChat userChat = new UserChat(phoneNumber, ChatChoice.SCANNER, ChatStage.WATING_IMAGE, Instant.now());
+        return userChat;
+    }
+
     public static boolean validateMessageInstant(UserChat userChat){
         if(userChat != null) {
             Duration difference = Duration.between(userChat.getMessageInstant(), Instant.now());

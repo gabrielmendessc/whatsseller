@@ -16,13 +16,13 @@ public class ResponseService {
     @Autowired
     private ResponseRepository responseRepository;
 
-    public List<Response> findyByChoiceStage(ChatChoice chatChoice, ChatStage chatStage){
-        List<Response> responseList = responseRepository.findByChoiceStage(chatChoice.getCode(), chatStage.getCode());
+    public List<Response> findByChoiceStageVariant(ChatChoice chatChoice, ChatStage chatStage, Integer responseVariant){
+        List<Response> responseList = responseRepository.findByChoiceStage(chatChoice.getCode(), chatStage.getCode(), responseVariant);
         return responseList;
     }
 
-    public Response insertResponse(Response Response){
-        return responseRepository.save(Response);
+    public List<Response> insertResponse(List<Response> responseList){
+        return responseRepository.saveAll(responseList);
     }
 
 }

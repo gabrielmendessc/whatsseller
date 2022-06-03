@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
 
 @NoArgsConstructor
 @Getter
@@ -24,9 +25,10 @@ public class Response implements Serializable {
     private String keyWords;
     private String message;
 
-    public Response(ChatChoice chatChoice, ChatStage chatStage, Integer responseNumber, String keyWords, String message){
+    public Response(ChatChoice chatChoice, ChatStage chatStage, Integer responseVariant, Integer responseNumber, String keyWords, String message){
         id.setChatChoice(chatChoice);
         id.setChatStage(chatStage);
+        id.setResponseVariant(responseVariant);
         id.setResponseNumber(responseNumber);
         this.keyWords = keyWords;
         this.message = message;
@@ -36,8 +38,9 @@ public class Response implements Serializable {
         try {
             Map<String, String> keyWordsMap = setKeyWordsMap(keyValues);
             String finalMessage = message;
+
             for (String key : keyWordsMap.keySet()) {
-                finalMessage.replaceAll(key, keyWordsMap.get(key));
+                finalMessage = finalMessage.replaceAll(Matcher.quoteReplacement(key), keyWordsMap.get(key));
             }
 
             return finalMessage;

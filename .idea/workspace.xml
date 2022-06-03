@@ -4,21 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af1c1d23-99e1-474c-87f7-618dadb287da" name="Default Changelist" comment="MessagingService, ChoiceAbstract with choice operations and h2 database for tests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/config/DevConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/NoChoice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/services/ChoiceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/pk/ResponsePK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/repositories/ResponseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/ResponseService.java" afterDir="false" />
+    <list default="true" id="af1c1d23-99e1-474c-87f7-618dadb287da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/ScannerChoice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/repositories/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/WhatsSellerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/WhatsSellerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/config/DevConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/config/DevConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/Response.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/ChoiceAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/ChoiceAbstract.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/MenuChoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/MenuChoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/resources/BotResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/resources/BotResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/resources/UserChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/UserChatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/NoChoice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/services/ChoiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/services/ChoiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/pk/ResponsePK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/pk/ResponsePK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/repositories/ResponseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/repositories/ResponseRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/ResponseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/ResponseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/utils/UserChatUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/utils/UserChatUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +71,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="$PROJECT_DIR$/../apache-maven-3.8.2" />
+        <option name="useMavenConfig" value="true" />
         <option name="userSettingsFile" value="$USER_HOME$/Documents/dev/apache-maven-3.3.9/conf/settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -78,34 +82,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;1565d231d2775e9f0ea92f5115ebca49&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/gabriel/IdeaProjects/whatsseller",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "1565d231d2775e9f0ea92f5115ebca49"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.gabrielmendes.whatsseller.services" />
       <recent name="com.gabrielmendes.whatsseller.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.WhatsSellerApplication">
+  <component name="RunManager" selected="Application.WhatsSellerApplication">
     <configuration name="WhatsSellerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.gabrielmendes.whatsseller.WhatsSellerApplication" />
-      <module name="Whats Seller" />
+      <module name="whatsseller" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.gabrielmendes.whatsseller.*" />
@@ -142,12 +147,11 @@
     <list>
       <item itemvalue="Application.WhatsSellerApplication" />
       <item itemvalue="Shell Script.keysenv.sh" />
-      <item itemvalue="Spring Boot.WhatsSellerApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Shell Script.keysenv.sh" />
         <item itemvalue="Application.WhatsSellerApplication" />
+        <item itemvalue="Shell Script.keysenv.sh" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +176,8 @@
       <workItem from="1650825659460" duration="7700000" />
       <workItem from="1651009431750" duration="12527000" />
       <workItem from="1651425905024" duration="5119000" />
-      <workItem from="1651791079001" duration="10040000" />
+      <workItem from="1651791079001" duration="14984000" />
+      <workItem from="1651872067205" duration="607000" />
     </task>
     <task id="LOCAL-00001" summary="heroku dev">
       <created>1650031311289</created>
@@ -440,11 +445,22 @@
       <option name="project" value="LOCAL" />
       <updated>1651096117813</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="ChoiceService and Response Service, Entitiy and Respository">
+      <created>1651801857569</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1651801857569</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -467,25 +483,31 @@
     <MESSAGE value="Lombok implementation on UserChat" />
     <MESSAGE value="MessagingService, ChoiceAbstract with choice operations and h2 database for tests" />
     <MESSAGE value="Removing api-keys" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removing api-keys" />
+    <MESSAGE value="ChoiceService and Response Service, Entitiy and Respository" />
+    <option name="LAST_COMMIT_MESSAGE" value="ChoiceService and Response Service, Entitiy and Respository" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BarcodeService.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/MenuChoica.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/ScannerChoice.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/Response.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/services/BotService.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/gabrielmendes/whatsseller/entities/choices/MenuChoice.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="19" />
+          <line>35</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="com.twilio.exception.ApiException" package="com.twilio.exception" />

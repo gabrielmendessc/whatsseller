@@ -5,7 +5,9 @@ import com.gabrielmendes.whatsseller.entities.IncomingMessage;
 import com.gabrielmendes.whatsseller.entities.UserChat;
 import com.gabrielmendes.whatsseller.entities.choices.ChoiceAbstract;
 import com.gabrielmendes.whatsseller.entities.choices.services.ChoiceService;
+import com.gabrielmendes.whatsseller.enums.ChatChoice;
 import com.gabrielmendes.whatsseller.enums.ChatKeywords;
+import com.gabrielmendes.whatsseller.enums.ChatStage;
 import com.gabrielmendes.whatsseller.utils.UserChatUtil;
 import com.twilio.Twilio;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,11 +40,18 @@ public class BotService {
             } else {
                 switch (userChat.getChatChoice()) {
                     case MENU:
-                        choice = choiceService.instantiateMenuChoice();
+                        if(incomingMessage.getMediaUrl() != null){
+                            choice = choiceService.instantiateScannerChoice();
+                            userChat.setChatChoice(ChatChoice.SCANNER);
+                            userChat.setChatStage(ChatStage.WATING_IMAGE);
+                        } else {
+                            choice = choiceService.instantiateMenuChoice();
+                        }
                         userChat = choice.processMessage(incomingMessage, userChat);
                         break;
                     case SCANNER:
-
+                        choice = choiceService.instantiateScannerChoice();
+                        userChat = choice.processMessage(incomingMessage, userChat);
                     case SHOPPING:
 
                     case DELIVERY:
@@ -51,8 +60,13 @@ public class BotService {
 
                 }
 
-                userChat.setMessageInstant(Instant.now());
-                userChatService.updateUserChat(userChat.getPhoneNumber(), userChat);
+                if(userChat != null) {
+                    userChat.setMessageInstant(Instant.now());
+                    userChatService.updateUserChat(userChat.getPhoneNumber(), userChat);
+                } else {
+                    userChatService.deleteUserChat(incomingMessage.getFrom());
+                }
+
                 messagingService.sendMessages(choice.getSendingMessages(), incomingMessage.getFrom(), incomingMessage.getTo());
             }
         } else {
@@ -60,7 +74,13 @@ public class BotService {
                 userChatService.deleteUserChat(userChat.getPhoneNumber());
             }
 
-            choice = choiceService.instantiateNoChoice();
+            if(incomingMessage.getMediaUrl() != null){
+                userChat = UserChatUtil.startUserChatScanner(incomingMessage.getFrom());
+                choice = choiceService.instantiateScannerChoice();
+            } else {
+                choice = choiceService.instantiateMenuChoice();
+            }
+
             userChat = choice.processMessage(incomingMessage, userChat);
             if(userChat != null) {
                 userChatService.insertUserChat(userChat);

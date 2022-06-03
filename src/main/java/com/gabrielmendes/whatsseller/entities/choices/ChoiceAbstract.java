@@ -14,6 +14,7 @@ import java.util.List;
 public abstract class ChoiceAbstract {
     protected ResponseService responseService;
     protected List<String> sendingMessages = new ArrayList<>();
+    protected String[] keyValues = {""};
 
     public ChoiceAbstract(ResponseService responseService){
         this.responseService = responseService;
